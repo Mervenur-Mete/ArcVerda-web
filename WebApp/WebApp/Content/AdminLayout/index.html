@@ -13,6 +13,7 @@
             <div class="brand">
                 <img src="/Content/AdminLayout/img/arc-verda-logo.png" alt="logo" class="logo">
             </div>
+            <button class="close-btn">✖</button> 
             <nav class="menu">
                 <div class="nav-item">
                     <a href="#" class="nav-link">
@@ -23,7 +24,6 @@
                 <div class="nav-item has-submenu-inline">
                     <span class="nav-link">
                         <span class="nav-icon">📄</span> <span class="link-text">Pages</span>
-
                     </span>
                     <div class="submenu-inline">
                         <div class="submenu-section">
@@ -41,13 +41,11 @@
                 <div class="nav-item">
                     <a href="#" class="nav-link">
                         <span class="nav-icon">📊</span> <span class="link-text">Charts</span>
-
                     </a>
                 </div>
                 <div class="nav-item">
                     <a href="#" class="nav-link">
                         <span class="nav-icon">📋</span> <span class="link-text">Tables</span>
-
                     </a>
                 </div>
             </nav>
@@ -56,25 +54,23 @@
         <!-- Main Content -->
         <main class="main">
             <header class="topbar">
-
-                <input type="text" placeholder="Ara...">
+                <button class="menu-toggle-btn">☰</button>
+                <input type="text" placeholder="Ara..." data-placeholder="Ara...">
                 <button class="search-btn">Ara</button>
 
                 <div class="right-actions">
                     <button class="create-btn">Oluştur</button>
                     <span class="user-icon">👤</span>
                 </div>
-
-
             </header>
 
             <section class="crud-container">
                 <h2>CRUD Listesi</h2>
                 <form class="crud-form">
-                    <input type="text" name="name" placeholder="Ad" required>
-                    <input type="email" name="email" placeholder="E-posta" required>
-                    <input type="tel" name="phone" placeholder="Telefon" required>
-                    <input type="text" name="city" placeholder="Şehir" required>
+                    <input type="text" name="name" placeholder="Ad" data-placeholder="Ad" required>
+                    <input type="email" name="email" placeholder="E-posta" data-placeholder="E-posta" required>
+                    <input type="tel" name="phone" placeholder="Telefon" data-placeholder="Telefon" required>
+                    <input type="text" name="city" placeholder="Şehir" data-placeholder="Şehir" required>
                     <button type="submit" class="add-btn">Ekle</button>
                 </form>
 
@@ -145,17 +141,6 @@
                                 <button class="delete-btn">Sil</button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Ali Veli</td>
-                            <td>ali@example.com</td>
-                            <td>05551234567</td>
-                            <td>İstanbul</td>
-                            <td>
-                                <button class="update-btn">Güncelle</button>
-                                <button class="delete-btn">Sil</button>
-                            </td>
-                        </tr>
 
                     </tbody>
                 </table>
@@ -165,27 +150,38 @@
                 © 2025 Copyright
             </footer>
         </main>
+
     </div>
-
-    
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const inputs = document.querySelectorAll('input[placeholder]');
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggleBtn = document.querySelector('.menu-toggle-btn');
+            const closeBtn = document.querySelector('.close-btn');
+            const sidebar = document.querySelector('.sidebar');
 
-        inputs.forEach(input => {
-            input.addEventListener('focus', function () {
-                this.dataset.placeholder = this.placeholder;
-                this.placeholder = '';
+            
+            menuToggleBtn.addEventListener('click', function () {
+                sidebar.classList.toggle('open');
             });
 
-            input.addEventListener('blur', function () {
-                if (this.value === '') {
-                    this.placeholder = this.dataset.placeholder;
-                }
+            
+            closeBtn.addEventListener('click', function () {
+                sidebar.classList.remove('open');
+            });
+
+            
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    input.setAttribute('placeholder', '');
+                });
+                input.addEventListener('blur', function () {
+                    
+                    if (!input.value) {
+                        input.setAttribute('placeholder', input.getAttribute('data-placeholder'));
+                    }
+                });
             });
         });
-    });
     </script>
-
 </body>
 </html>

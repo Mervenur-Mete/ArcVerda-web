@@ -1,0 +1,40 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient( 135deg, rgba(33, 37, 41, 1) 0%, /* koyu antrasit */
+    rgba(75, 96, 67, 0.95) 50%, /* doğal yeşil */
+    rgba(163, 177, 138, 0.9) 100% /* pastel yeşil */
+    );
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+}
+
+    .container a {
+        color: blue;
+    }
+
+.plant {
+    width: 300px;
+    opacity: 1;
+    animation: wiltPlant 2s ease-in-out forwards;
+    margin-bottom: 20px;
+}
+
+@keyframes wiltPlant {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}

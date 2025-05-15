@@ -1,0 +1,159 @@
+﻿/* Sidebar */
+.sidebar {
+    width: 60px;
+    background-color: #005555;
+    border-right: 1px solid #ddd;
+    padding: 20px 15px;
+    position: relative;
+    transition: width 0.5s ease, background-color 0.3s ease;
+    overflow: hidden;
+}
+
+    .sidebar:hover {
+        width: 220px;
+        background-color: #1a6e6e !important;
+    }
+
+    .sidebar .logo {
+        width: 55px;
+        height: auto;
+        border-radius: 50%;
+        transition: width 0.5s ease;
+    }
+
+    .sidebar:hover .logo {
+        width: 180px;
+    }
+
+.brand {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar.open .close-btn {
+    display: inline-block;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px;
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+    .nav-link:hover {
+        background-color: #ecf0f1;
+        color: #000;
+    }
+
+.nav-icon {
+    font-size: 1.4em;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.link-text {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.sidebar:hover .link-text {
+    opacity: 1;
+}
+
+/* Submenu */
+.has-submenu-inline:hover .submenu-inline {
+    display: block;
+}
+
+.submenu-inline {
+    display: none;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 8px;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.submenu-section {
+    margin-bottom: 10px;
+    transition: 0.5s ease all;
+}
+
+    .submenu-section h4 {
+        font-size: 0.8rem;
+        color: #888;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+    }
+
+    .submenu-section a {
+        display: block;
+        color: #2c3e50;
+        font-size: 0.9rem;
+        padding: 4px 0;
+        text-decoration: none;
+    }
+
+        .submenu-section a:hover {
+            color: #16a085;
+        }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+        @media (max-width: 1000px), (max-width: 600px) {
+            .sidebar {
+                width: 40%;
+                max-width: 170px;
+                position: absolute;
+                top: 0;
+                left: -100%;
+                transition: left 0.5s ease;
+                height: 100vh;
+                z-index: 1000;
+            }
+
+                .sidebar.open {
+                    left: 0;
+                }
+
+            .submenu-inline {
+                position: static;
+                box-shadow: none;
+            }
+        }
+
+        >

@@ -1,0 +1,40 @@
+﻿
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="@Url.Content("~/Content/AdminLayout/css/pages/_login.css")" rel="stylesheet">
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">
+            <img src="~/Content/AdminLayout/img/arc-verda-logo.png" alt="ArcVerda Logo" />
+        </div>
+        <h2>Welcome Back</h2>
+        <p>Log in and start creating your projects now</p>
+        <button class="google-btn" onclick="googleLogin()">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+            Continue with Google
+        </button>
+    </div>
+
+    <script>
+        function googleLogin() {
+            alert("You will be logged in with Google.");
+        }
+    </script>
+</body>
+</html>

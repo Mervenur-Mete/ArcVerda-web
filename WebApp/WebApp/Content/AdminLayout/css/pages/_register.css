@@ -1,0 +1,135 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.register {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+    padding: 35px 30px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.register-header {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+}
+
+.info-box {
+    background: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border: 1.5px solid #ffeeba;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 16px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1.5px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-save, .btn-skip {
+    flex-grow: 1;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.btn-save {
+    background-color: #28a745;
+}
+
+.btn-skip {
+    background-color: #dc3545;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .register {
+        padding: 30px 25px;
+        max-width: 100%;
+    }
+
+    .register-header {
+        font-size: 22px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+        right: 10px;
+        top: 10px;
+    }
+
+    .info-box {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-save, .btn-skip {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}

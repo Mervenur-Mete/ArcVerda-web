@@ -8,9 +8,8 @@
 
     <!-- CSS -->
     <link href="~/Content/AdminLayout/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    <link href="~/Content/AdminLayout/css/layout/content.css" rel="stylesheet" />
-    <link href="~/Content/AdminLayout/css/layout/sidebar.css" rel="stylesheet" />
-    <link href="~/Content/AdminLayout/css/layout/topbar.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/css/_main.css" rel="stylesheet" />
+    
 </head>
 <body>
 
@@ -35,12 +34,15 @@
                     <div class="submenu-inline">
                         <div class="submenu-section">
                             <h4>LOGIN SCREENS</h4>
-                            <a href="~/Content/AdminLayout/login.html">Login</a>
-                            <a href="~/Content/AdminLayout/register.html">Register</a>
+                            <a href="@Url.Action("Login", "Admin")">Login</a>
+
+                            <a href="@Url.Action("Register", "Admin")">Register</a>
+
                         </div>
                         <div class="submenu-section">
                             <h4>OTHER PAGES</h4>
-                            <a href="~/Content/AdminLayout/404.html">404 Page</a>
+                            <a href="@Url.Action("NotFound","Admin")">404 Page</a>
+
                         </div>
                     </div>
                 </div>
@@ -66,8 +68,18 @@
                 <button class="search-btn">Ara</button>
 
                 <div class="right-actions">
-                    <button class="create-btn">Oluştur</button>
-                    <span class="user-icon">👤</span>
+                    <button class="create-btn">Create</button>
+
+                    <div class="profile-menu">
+                        <label tabindex="0" class="user-icon">👤</label>
+                        <ul class="dropdown">
+                            <li><a href="#">👤 Profile</a></li>
+                            <li><a href="#">📋 Settings</a></li>
+                            <li><a href="#">🕒 Activity Log</a></li>
+                            <li><a href="#">🚪 Logout</a></li>
+
+                        </ul>
+                    </div>
                 </div>
             </header>
 

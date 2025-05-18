@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/AdminLayout/css/pages/_register.css">
+</head>
+<body>
+    <div class="register" id="formRegister">
+        <div class="register-header">
+            Welcome to ArcVerda!
+            <span class="close-btn" id="closeBtn">&times;</span>
+        </div>
+        <div class="info-box">May I ask you to introduce yourself?</div>
+
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" placeholder="Enter company name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="btn-skip" id="skipBtn">Skip</button>
+                <button type="submit" class="btn-save">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Placeholder focuslanınca gitsin özelliği
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            const originalPlaceholder = input.placeholder;
+            input.addEventListener('focus', () => input.placeholder = '');
+            input.addEventListener('blur', () => {
+                if (input.value === '') input.placeholder = originalPlaceholder;
+            });
+        });
+
+        // Form elementleri
+        const form = document.getElementById('userForm');
+        const register = document.getElementById('formRegister');
+        const closeBtn = document.getElementById('closeBtn');
+        const skipBtn = document.getElementById('skipBtn');
+
+        // Save butonu (form submit)
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Sayfa yenilenmesin
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+
+            console.log("Kayıt alındı:");
+            console.log("Ad:", name);
+            console.log("Şirket:", company);
+            console.log("Email:", email);
+
+            alert("Bilgiler kaydedildi!");
+            register.classList.add('hidden'); // Formu gizle
+        });
+
+        // Çarpıya basıldığında
+        closeBtn.addEventListener('click', function () {
+            register.classList.add('hidden');
+        });
+
+        // Skip'e basıldığında
+        skipBtn.addEventListener('click', function () {
+            alert("Form atlandı.");
+            register.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,226 @@
+﻿/* Navbar */
+.site-navbar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transform: none;
+    background: #005555;
+    backdrop-filter: blur(12px);
+    padding: 10px 24px;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid rgba(0, 100, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 80, 0, 0.1);
+    z-index: 1000;
+    border-radius: 0;
+}
+
+/* Konteyner */
+.container {
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* İç düzen */
+.nav-wrapper {
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+    padding: 8px 0;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url('/Content/SiteLayout/images/logo.png') no-repeat center;
+    background-size: cover;
+    flex-shrink: 0;
+    gap: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+    .logo::before {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: url('/Content/SiteLayout/images/ArcVerda.png') no-repeat center;
+        background-size: cover;
+        flex-shrink: 0;
+    }
+
+.logo-text {
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Menü listesi */
+.nav-list-item {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+    .nav-list-item li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 4px;
+        font-weight: 600;
+        font-size: 17px;
+        transition: all 0.3s ease;
+    }
+
+        .nav-list-item li a:hover,
+        .nav-list-item .active > a {
+            color: #6c757d !important;
+        }
+
+    .nav-list-item.active {
+        color: #000000;
+    }
+
+    /* Dropdown menüler */
+    .nav-list-item .has-sub {
+        position: relative;
+    }
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(245, 255, 245, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    display: none;
+    min-width: 180px;
+    z-index: 10;
+    border: 1px solid rgba(0, 100, 0, 0.1);
+}
+
+    .sub-menu li a {
+        display: block;
+        padding: 10px 15px;
+        color: #003c2f;
+        font-size: 15px;
+        font-weight: 500;
+        white-space: nowrap;
+        transition: background 0.3s ease;
+    }
+
+        .sub-menu li a:hover {
+            background-color: #e2fbe3;
+        }
+
+/* Alt menü gösterme */
+.has-sub:hover > .sub-menu {
+    display: block;
+}
+
+.sub-menu .has-sub:hover > .sub-menu {
+    left: 100%;
+    top: 0;
+}
+
+/* Gizli checkbox */
+.site-menu-toggle {
+    display: none;
+}
+
+/* Menü butonu (hamburger) */
+.site-menu-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+    .site-menu-btn span,
+    .site-menu-btn span::before,
+    .site-menu-btn span::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .site-menu-btn span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+        .site-menu-btn span::before {
+            top: -10px;
+        }
+
+        .site-menu-btn span::after {
+            bottom: -10px;
+        }
+
+/* Responsive */
+@media (max-width: 893px) {
+    .site-menu-btn {
+        display: block;
+    }
+
+    .nav-list-item {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(245, 255, 245, 0.95);
+        backdrop-filter: blur(8px);
+        border-radius: 0 0 12px 12px;
+        width: 60%;
+        display: none;
+        padding: 20px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .site-menu-toggle:checked + .site-menu-btn + .nav-list-item {
+        display: flex;
+    }
+
+    .nav-list-item li a {
+        color: #003c2f;
+        font-size: 16px;
+    }
+
+    .sub-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        padding-left: 10px;
+    }
+
+    .has-sub:hover > .sub-menu {
+        display: block;
+    }
+
+    .sub-menu li a {
+        padding: 6px 0;
+        font-size: 15px;
+    }
+
+    .sub-menu .has-sub:hover > .sub-menu {
+        position: static;
+        display: block;
+        padding-left: 15px;
+    }
+}

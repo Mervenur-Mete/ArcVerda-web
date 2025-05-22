@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebApp",
+    "\\WebApp\\WebApp",
+    "\\WebApp\\WebApp\\Models",
+    "\\WebApp\\WebApp\\Models\\DataContext",
+    "\\WebApp\\WebApp\\Models\\Model",
+    "\\WebApp\\WebApp\\Views",
+    "\\WebApp\\WebApp\\Views\\Admin"
   ],
-  "SelectedNode": "\\WebApp.sln",
+  "SelectedNode": "\\WebApp\\WebApp\\Views\\Admin\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

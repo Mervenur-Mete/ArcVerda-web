@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|c:\\users\\kaank\\onedrive\\masa\u00FCst\u00FC\\arcverda-web\\webapp\\webapp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|c:\\users\\kaank\\onedrive\\masa\u00FCst\u00FC\\arcverda-web\\webapp\\webapp\\obj\\debug\\.netframework,version=v4.8.1.assemblyattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|solutionrelative:webapp\\obj\\debug\\.netframework,version=v4.8.1.assemblyattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|c:\\users\\kaank\\onedrive\\masa\u00FCst\u00FC\\arcverda-web\\webapp\\webapp\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\webapp\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|c:\\users\\kaank\\onedrive\\masa\u00FCst\u00FC\\arcverda-web\\webapp\\webapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\webapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|c:\\users\\kaank\\onedrive\\masa\u00FCst\u00FC\\arcverda-web\\webapp\\webapp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40643808-F42F-4C8F-9EDB-8B31C9FD98E4}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".NETFramework,Version=v4.8.1.AssemblyAttributes.cs",
+              "DocumentMoniker": "C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\WebApp\\obj\\Debug\\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs",
+              "RelativeDocumentMoniker": "WebApp\\obj\\Debug\\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs",
+              "ToolTip": "C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\WebApp\\obj\\Debug\\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs",
+              "RelativeToolTip": "WebApp\\obj\\Debug\\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T20:17:40.708Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -39,13 +56,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\WebApp\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApp\\Views\\Admin\\Index.cshtml",
               "ToolTip": "C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\WebApp\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "WebApp\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-22T20:09:04.177Z",
               "EditorCaption": ""
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "WebApp\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\kaank\\OneDrive\\Masa\u00FCst\u00FC\\ArcVerda-web\\WebApp\\WebApp\\Controllers\\AdminController.cs",
               "RelativeToolTip": "WebApp\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T20:08:59.186Z",
               "EditorCaption": ""

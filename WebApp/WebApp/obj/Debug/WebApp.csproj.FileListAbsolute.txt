@@ -169,3 +169,7 @@ C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\obj\Debug\WebApp.c
 C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\obj\Debug\WebApp.csproj.Up2Date
 C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\obj\Debug\WebApp.dll
 C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\obj\Debug\WebApp.pdb
+C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\bin\EntityFramework.dll
+C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\bin\EntityFramework.xml
+C:\Users\kaank\OneDrive\Masaüstü\ArcVerda-web\WebApp\WebApp\bin\EntityFramework.SqlServer.xml

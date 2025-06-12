@@ -1,19 +1,41 @@
 ﻿/* Navbar */
 .site-navbar {
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    top: 0;
     left: 0;
-    transform: none;
-    background: #005555;
-    backdrop-filter: blur(12px);
-    padding: 10px 24px;
+    right: 0;
+    background: linear-gradient( 90deg, #1b7895 0%, #2b9282 50%, #4796a9 90% );
+    box-shadow: 0 4px 12px rgba(71, 150, 169, 0.3);
+    border-bottom: 1px solid rgba(43, 146, 130, 0.25);
+    padding: 14px 28px;
     width: 100%;
-    max-width: 100%;
-    border: 1px solid rgba(0, 100, 0, 0.15);
-    box-shadow: 0 8px 24px rgba(0, 80, 0, 0.1);
-    z-index: 1000;
-    border-radius: 0;
+    z-index: 1000 !important;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
 }
+
+    /* Hover efekti */
+    .site-navbar:hover {
+        background: linear-gradient( 90deg, #2b9282 0%, #4796a9 50%, #1b7895 100% );
+        box-shadow: 0 6px 16px rgba(43, 146, 130, 0.35);
+    }
+.logo {
+    color: #e0f0f1; /* Açık, yumuşak ton, navbar renklerine uyumlu */
+    font-weight: 500;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.12em; /* Harf aralığı biraz açıldı */
+    text-shadow: 0 2px 6px rgba(43, 146, 130, 0.6); /* Hafif gölgeyle derinlik */
+    text-transform: uppercase; /* Büyük harflerle vurgu */
+    user-select: none; /* Yazının seçilmesini engeller */
+    transition: color 0.3s ease;
+}
+
+    .logo:hover {
+        color: #ffffff;
+        text-shadow: 0 4px 10px rgba(71, 150, 169, 0.9);
+        cursor: pointer;
+    }
 
 /* Konteyner */
 .container {
@@ -24,71 +46,62 @@
 /* İç düzen */
 .nav-wrapper {
     display: flex;
-    align-items: center !important;
+    align-items: center;
     justify-content: space-between;
-    padding: 8px 0;
-    position: relative;
 }
 
 /* Logo */
 .logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: url('/Content/SiteLayout/images/logo.png') no-repeat center;
-    background-size: cover;
-    flex-shrink: 0;
-    gap: 10px;
-    text-decoration: none;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    user-select: none;
 }
 
     .logo::before {
         content: "";
         display: inline-block;
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         background: url('/Content/SiteLayout/images/ArcVerda.png') no-repeat center;
         background-size: cover;
-        flex-shrink: 0;
     }
 
 .logo-text {
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    font-family: 'Segoe UI', sans-serif;
+    color: #e0f0f1; /* Açık, yumuşak */
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.05em;
 }
 
-/* Menü listesi */
+/* Menü */
 .nav-list-item {
     list-style: none;
     display: flex;
-    gap: 28px;
-    align-items: center;
+    gap: 32px;
+    align-items: center !important;
+    justify-content: center;
 }
 
     .nav-list-item li a {
         text-decoration: none;
-        color: #fff;
-        padding: 8px 4px;
+        color: #e0f0f1cc;
         font-weight: 600;
-        font-size: 17px;
-        transition: all 0.3s ease;
+        font-size: 16px;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: background 0.3s ease, color 0.3s ease;
     }
 
-        .nav-list-item li a:hover,
-        .nav-list-item .active > a {
-            color: #6c757d !important;
+        .nav-list-item li a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #d1e7e7cc;
         }
 
-    .nav-list-item.active {
-        color: #000000;
-    }
-
-    /* Dropdown menüler */
+    /* Dropdown */
     .nav-list-item .has-sub {
         position: relative;
     }
@@ -97,28 +110,29 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(245, 255, 245, 0.95);
-    backdrop-filter: blur(8px);
+    background: #ffffffee;
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     display: none;
     min-width: 180px;
     z-index: 10;
-    border: 1px solid rgba(0, 100, 0, 0.1);
+    padding: 10px 0;
 }
 
     .sub-menu li a {
         display: block;
-        padding: 10px 15px;
+        padding: 10px 20px;
         color: #003c2f;
         font-size: 15px;
         font-weight: 500;
         white-space: nowrap;
-        transition: background 0.3s ease;
+        transition: all 0.3s ease;
+        border-radius: 4px;
     }
 
         .sub-menu li a:hover {
-            background-color: #e2fbe3;
+            background: #f0faf8;
+            color: #2b9282;
         }
 
 /* Alt menü gösterme */
@@ -131,16 +145,16 @@
     top: 0;
 }
 
-/* Gizli checkbox */
+/* Menü toggle */
 .site-menu-toggle {
     display: none;
 }
 
-/* Menü butonu (hamburger) */
+/* Hamburger Menü */
 .site-menu-btn {
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 24px;
     position: relative;
     cursor: pointer;
     z-index: 1010;
@@ -153,8 +167,9 @@
         position: absolute;
         height: 3px;
         width: 100%;
-        background: #fff;
-        transition: 0.3s;
+        background: #e0f0f1cc;
+        border-radius: 2px;
+        transition: all 0.3s ease;
     }
 
     .site-menu-btn span {
@@ -181,15 +196,14 @@
         position: absolute;
         top: 100%;
         right: 0;
-        background: rgba(245, 255, 245, 0.95);
-        backdrop-filter: blur(8px);
+        background: #f9fafb;
         border-radius: 0 0 12px 12px;
-        width: 60%;
+        width: 100%;
         display: none;
         padding: 20px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         align-items: flex-start;
-        gap: 14px;
+        gap: 16px;
     }
 
     .site-menu-toggle:checked + .site-menu-btn + .nav-list-item {
@@ -203,24 +217,19 @@
 
     .sub-menu {
         position: static;
-        box-shadow: none;
         background: transparent;
-        border: none;
+        box-shadow: none;
         padding-left: 10px;
     }
 
-    .has-sub:hover > .sub-menu {
-        display: block;
-    }
+        .sub-menu li a {
+            padding: 6px 0;
+            color: #003c2f;
+        }
 
-    .sub-menu li a {
-        padding: 6px 0;
-        font-size: 15px;
-    }
-
-    .sub-menu .has-sub:hover > .sub-menu {
-        position: static;
-        display: block;
-        padding-left: 15px;
-    }
+        .sub-menu .has-sub:hover > .sub-menu {
+            position: static;
+            padding-left: 15px;
+            display: block;
+        }
 }

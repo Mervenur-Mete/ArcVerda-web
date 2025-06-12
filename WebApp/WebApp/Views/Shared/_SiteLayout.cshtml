@@ -21,6 +21,9 @@
 
     <link rel="stylesheet" href="~/Content/SiteLayout/css/S_pages/_contact.css" />
     <link rel="stylesheet" href="~/Content/SiteLayout/css/_navbar.css" />
+    <link rel="stylesheet" href="~/Content/SiteLayout/css/S_pages/_footer.css" />
+
+
 
 
     @Styles.Render("~/Content/SiteLayout/css")
@@ -39,54 +42,50 @@
     <!-- Navbar -->
     <nav class="site-navbar">
         <div class="container">
-            <div class="menu-wrap">
-                <div class="nav-wrapper">
-                    <!-- Logo -->
-                    <a href="/" class="logo">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <a href="~/Content/SiteLayout/images/ArcVerda.png" class="logo">ArcVerda</a>
 
-                        <span class="logo-text">ArcVerda</span>
-                    </a>
+                <!-- Hamburger Menü -->
+                <input type="checkbox" id="site-menu-toggle" class="site-menu-toggle" hidden>
+                <label for="site-menu-toggle" class="site-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
 
-                    <!-- Gizli checkbox -->
-                    <input type="checkbox" id="site-menu-toggle" class="site-menu-toggle" hidden>
-
-                    <!-- Menü butonu (hamburger) -->
-                    <label for="site-menu-toggle" class="site-menu-btn">
-                        <span></span>
-                    </label>
-
-                    <!-- Menü -->
-                    <ul class="nav-list-item">
-                        <li class="@(ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")">
-                            <a href="@Url.Action("Index", "Home")">Home</a>
-                        </li>
-                        <li class="has-sub">
-                            <a href="@Url.Content("~/Content/SiteLayout/properties.html")">Properties</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Buy Property</a></li>
-                                <li><a href="#">Sell Property</a></li>
-                                <li class="has-sub">
-                                    <a href="#">Dropdown</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Sub Menu One</a></li>
-                                        <li><a href="#">Sub Menu Two</a></li>
-                                        <li><a href="#">Sub Menu Three</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="@Url.Content("~/Content/SiteLayout/services.html")">Services</a></li>
-                        <li class="@(ViewContext.RouteData.Values["action"].ToString() == "About" ? "active" : "")">
-                            <a href="@Url.Action("About", "Home")">About</a>
-                        </li>
-                        <li class="@(ViewContext.RouteData.Values["action"].ToString() == "Contact" ? "active" : "")">
-                            <a href="@Url.Action("Contact", "Home")">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Menü -->
+                <ul class="nav-list-item">
+                    <li class="@(ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")">
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li class="has-sub">
+                        <a href="@Url.Content("~/Content/SiteLayout/properties.html")">Properties</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Buy Property</a></li>
+                            <li><a href="#">Sell Property</a></li>
+                            <li class="has-sub">
+                                <a href="#">Dropdown</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Sub Menu One</a></li>
+                                    <li><a href="#">Sub Menu Two</a></li>
+                                    <li><a href="#">Sub Menu Three</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Content("~/Content/SiteLayout/services.html")">Services</a></li>
+                    <li class="@(ViewContext.RouteData.Values["action"].ToString() == "About" ? "active" : "")">
+                        <a href="@Url.Action("About", "Home")">About</a>
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["action"].ToString() == "Contact" ? "active" : "")">
+                        <a href="@Url.Action("Contact", "Home")">Contact Us</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
+
 
     @RenderBody()
 
@@ -94,113 +93,51 @@
     <div class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="widget">
-                        <h3>Contact</h3>
-                        <address>43 Raymouth Rd. Baltemoer, London 3910</address>
-                        <ul class="list-unstyled links">
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li>
-                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.widget -->
+
+                <div class="widget">
+                    <h3>Contact</h3>                 
+                    <ul class="list-unstyled links">
+                        <li><a href="tel://905367209512">+90(536) 720 95 12</a></li>
+                        <li><a href="mailto:info.arcaistartup@gmail.com">info.arcaistartup@gmail.com</a></li>
+                    </ul>
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="widget">
-                        <h3>Sources</h3>
-                        <ul class="list-unstyled float-start links">
+
+                <div class="widget">
+                    <h3>Sources</h3>
+                    <div class="sources-columns">
+                        <ul class="list-unstyled links">
                             <li><a href="#">About us</a></li>
                             <li><a href="#">Services</a></li>
+                            
+                        </ul>
+                        <ul class="list-unstyled links">                 
                             <li><a href="#">Vision</a></li>
                             <li><a href="#">Mission</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
                         </ul>
-                        <ul class="list-unstyled float-start links">
-                            <li><a href="#">Partners</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Creative</a></li>
-                        </ul>
+                        
                     </div>
-                    <!-- /.widget -->
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="widget">
-                        <h3>Links</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">Our Vision</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
 
-                        <ul class="list-unstyled social">
-                            <li>
-                                <a href="#"><span class="icon-instagram"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-twitter"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-facebook"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-linkedin"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-pinterest"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-dribbble"></span></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.widget -->
+                <div class="widget">
+                    <h3>Links</h3>
+                 
+                    <ul class="list-unstyled social">
+                        <li><a href="https://www.instagram.com/arcverda/"><span class="icon-instagram"></span></a></li>
+                        <li><a href="https://www.linkedin.com/company/arcai-a/posts/?feedView=all"><span class="icon-linkedin"></span></a></li>
+                    </ul>
                 </div>
-                <!-- /.col-lg-4 -->
+
             </div>
-            <!-- /.row -->
 
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <!--
-                      **==========
-                      NOTE:
-                      Please don't remove this copyright link unless you buy the license here https://untree.co/license/
-                      **==========
-                    -->
-
-                    <p>
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script>
-                        . All Rights Reserved. &mdash; Designed with love by
-                        <a href="https://untree.co">Untree.co</a>
-                        <!-- License information: https://untree.co/license/ -->
-                    </p>
-                    <div>
-                        Distributed by
-                        <a href="https://themewagon.com/" target="_blank">themewagon</a>
-                    </div>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArcVerda. All rights reserved.</p>
             </div>
         </div>
-        <!-- /.container -->
     </div>
+
     <!-- /.site-footer -->
     <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-    </div>
+
 
     <script src="~/Content/SiteLayout/js/bootstrap.bundle.min.js"></script>
     <script src="~/Content/SiteLayout/js/tiny-slider.js"></script>
